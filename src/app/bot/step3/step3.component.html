@@ -1,0 +1,36 @@
+<div class="frame">
+  <div class="heading">
+    <div class="heading__title">
+      <p class="text-wrapper-3">Step 3. 
+        <span *ngIf="activeSelector === 'inputSelector'; else isButton">Select an input</span>
+        <ng-template #isButton>Select a button</ng-template>
+      </p>
+      <p class="text-wrapper" *ngIf="!toggleText">Select an element</p>
+    </div>
+  
+    <div class="group">
+      <div class="outline-essentional-wrapper">
+        <img
+          class="vector"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/vector-1.svg"
+        />
+      </div>
+      <div class="outline-essentional-wrapper">
+        <img
+          class="vector"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/material-symbols-close-rounded.svg"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-col" *ngIf="toggleText">
+    <label>Enter some text</label>
+    <input class="input-field" [(ngModel)]="content" placeholder="Ex: search keyword, description..." />
+  </div>
+ 
+  <div class="d-flex justify-center gap-10">
+    <button class="reset-btn" (click)="resetAllSelected()">Reset</button>
+    <button class="run-bot" (click)="saveNewPreset()">Save</button>
+  </div>
+</div>

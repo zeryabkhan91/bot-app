@@ -1,0 +1,16 @@
+<app-step1  
+  [activeStep]="activeStep" 
+  *ngIf="activeStep === 1"
+  (nextStep)="moveToNextStep(null)"
+/>
+<app-step2 
+  [activeStep]="activeStep"
+  *ngIf="activeStep === 2"
+  (runCustomBot)="runBot()" 
+  (nextStep)="moveToNextStep($event)" 
+/>
+<app-step3 
+  [activeStep]="activeStep"
+  *ngIf="activeStep === 3"
+  (nextStep)="moveToNextStep($event)" 
+/>

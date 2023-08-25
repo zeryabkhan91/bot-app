@@ -1,0 +1,86 @@
+
+.section {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: auto;
+  max-width: 400px; 
+
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.heading {
+  color: #F65C65;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  height: auto;
+}
+
+.input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  height: 26px;
+  border-radius: 4px;
+  padding: 10px 16px 11px 16px;
+}
+
+.add-btn {
+  padding: 0px 20.600000381469727px 0px 20.780000686645508px;
+  border-radius: 3px;
+  border: 1px;
+  width: 30.86px;
+  text-align: center;
+  height: 38.28px;
+  font-size: 33px;
+  background-color: #DDDDDD;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.p-status {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.list {
+  margin-top: 10px;
+}
+
+.item {
+  display: flex;
+  border-radius: 3px;
+  background: #E0E8F5;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.check-box {
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.text-wrapper-3 {
+  flex: 1;
+  font-size: 16px;
+}
+
+.span-delete {
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<div class="frame">
+  <div class="heading">
+    <div class="heading__title">
+      <p class="text-wrapper-3">Step 1. For loop</p>
+      <p class="text-wrapper">
+        <ng-container *ngIf="(selectedXPaths$ | async) as selectedXPaths; else selectElementMessage">
+          <div *ngIf="selectedXPaths.length >= 2" class="message">
+            Great! You selected 2 elements, we predicted {{ selectedXPaths.length - 2 }} additional elements.
+            In total {{ selectedXPaths.length }} elements are selected.
+          </div>
+        </ng-container>
+        <ng-template #selectElementMessage>
+          <div class="message">Select at least two elements before proceeding.</div>
+        </ng-template>
+      </p>
+    </div>
+  
+    <div class="group">
+      <div class="outline-essentional-wrapper">
+        <img
+          class="vector"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/vector-1.svg"
+        />
+      </div>
+      <div class="outline-essentional-wrapper">
+        <img
+          class="vector"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/material-symbols-close-rounded.svg"
+        />
+      </div>
+
+    </div>
+  </div>
+
+  <div class="d-flex justify-center gap-10">
+    <button class="reset-btn" (click)="reset()">Reset</button>
+    <button class="run-bot" (click)="moveToNextStep()">Save</button>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+  <div class="section" appHoverBorder>
+    <div class="heading">Your tasks</div>
+
+    <div>
+      <form class="input">
+        <input #taskInput1 placeholder="Take the garbage out" />
+        <div class="add-btn" (click)="addTask(taskInput1.value)">+</div>
+      </form>
+    
+      <form class="input">
+        <input #taskInput2 placeholder="Take the garbage out" />
+        <div class="add-btn" (click)="addTask(taskInput2.value)">+</div>
+      </form>
+    
+      <form class="input">
+        <input #taskInput3 placeholder="Take the garbage out" />
+        <div class="add-btn" (click)="addTask(taskInput3.value)">+</div>
+      </form>
+    </div>
+
+    <div  class="div-2">
+      <div class="p-status"><p class="p">You have 4 pending items</p></div>
+      <div class="list">
+        <div class="item" *ngFor="let task of tasks; let i = index" >
+          <input type="checkbox" class="check-box" (click)="completeTask(i)" />
+          <div class="text-wrapper-3" [class.completed]="task.isCompleted">{{task.title}}</div>
+          <img
+            class="span-delete"
+            (click)="removeTask(i)"
+            src="https://generation-sessions.s3.amazonaws.com/32cf77656c038822d904b88e85366b9a/img/span-delete-3.svg"
+          />
+        </div>
+
+      </div>
+    </div>
+  </div>

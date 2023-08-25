@@ -1,0 +1,92 @@
+<div class="frame">
+  <div class="heading">
+    <div class="heading__title">
+      <p class="text-wrapper-3">Step {{activeStep}}. Do an action on each element</p>
+      <p class="text-wrapper">Add action you want the bot to do on the page</p>
+    </div>
+  
+    <div class="group">
+      <div class="outline-essentional-wrapper">
+        <img
+          class="vector"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/vector-1.svg"
+        />
+      </div>
+      <div class="outline-essentional-wrapper">
+        <img
+          class="vector"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/material-symbols-close-rounded.svg"
+        />
+      </div>
+
+    </div>
+  </div>
+ 
+
+  <div class="d-flex justify-between mx-8">
+    <div class="action-box cursor-pointer" (click)="moveToNextStep({ isButton: true })">
+      <div class="action-box__container">
+        <img
+          class="img"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/bold-duotone---essentional--ui---cursor.svg"
+        />
+        <div class="div-3">
+          <div class="text-wrapper-2">Click a button</div>
+          <p class="p">allows you to click on a button for ead element</p>
+        </div>
+      </div>
+    </div>
+    <div class="action-box cursor-pointer" (click)="moveToNextStep({ isInput: true })">
+      <div class="action-box__container">
+        <img
+          class="img"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/bold-duotone---text-formatting---text.svg"
+        />
+        <div class="div-3">
+          <div class="text-wrapper-2">Input text</div>
+          <p class="p">allows you to input text for each element</p>
+        </div>
+      </div>
+    </div>
+    <div class="action-box" disabled>
+      <div class="action-box__container">
+        <img
+          class="img"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/bold-duotone---essentional--ui---database.svg"
+        />
+        <div class="div-3">
+          <div class="text-wrapper-2">Store data</div>
+          <p class="p">Amet minim mollit non deserunt ullamco est sit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="action-box" disabled>
+      <div class="action-box__container">
+        <img
+          class="img"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/bold-duotone---list---list.svg"
+        />
+        <div class="div-3">
+          <div class="text-wrapper-2">If condition</div>
+          <p class="p">Amet minim mollit non deserunt ullamco est sit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="action-box" disabled>
+      <div class="action-box__container">
+        <img
+          class="img"
+          src="https://generation-sessions.s3.amazonaws.com/781b5a3e77f86e75bcdc3e3f87f9924b/img/bold-duotone---arrows---restart-1.svg"
+        />
+        <div class="div-3">
+          <div class="text-wrapper-2">For Loop</div>
+          <p class="p">Amet minim mollit non deserunt ullamco est sit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-center">
+    <button class="run-bot" (click)="runBot()">Run bot</button>
+  </div>
+</div>
